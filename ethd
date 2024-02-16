@@ -3499,7 +3499,7 @@ cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")"
 if [[ "$OSTYPE" == "darwin"* ]]; then
 # This is a macOS-ism
 # shellcheck disable=SC2016
-  OWNER=$(stat -f '$Su' .)
+  OWNER=$(stat -f '%Su' .)
 else
   OWNER=$(stat -c '%U' .)
 fi
